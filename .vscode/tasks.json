@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Arduino: watch compile on save",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/scripts/watch-compile.ps1"
+      ],
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": false
+      }
+    },
+    {
+      "label": "Arduino: compile once",
+      "type": "shell",
+      "command": "${workspaceFolder}/tools/arduino-cli/arduino-cli.exe",
+      "args": [
+        "compile",
+        "--fqbn",
+        "arduino:avr:uno",
+        "--build-path",
+        "build",
+        "."
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
