@@ -1,4 +1,4 @@
-﻿[wokwi]
+[wokwi]
 version = 1
-firmware = "build/sketch.ino.hex"
-elffile = "build/sketch.ino.elf"
+firmware = "build/Arduino-Learning-Wokwi.ino.hex"
+elf = "build/Arduino-Learning-Wokwi.ino.elf"
